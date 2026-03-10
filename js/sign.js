@@ -41,6 +41,11 @@ signInBtn.addEventListener('click', function() {
     if (newUser.username === '' || newUser.email === '' || newUser.password === '') {
         document.getElementById('general-error').style.display = 'block';
 
+    }else if(userdata.find(u => u.email === newUser.email && u.password === newUser.password)){
+
+    document.getElementById("general-error").style.display="block";
+    document.getElementById("general-error").textContent="This account already exists";
+    return;
     }else{
         document.getElementById('general-error').style.display = 'none';
         if (!userRegex.test(newUser.username)) {
