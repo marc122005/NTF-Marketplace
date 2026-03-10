@@ -1,0 +1,28 @@
+:root{
+    --main-font: "Space Mono", monospace;
+    --font-2: "Work Sans", sans-serif;
+    --background-color: #2B2B2B;
+    --box-color: #3B3B3B;
+    --text-gray: #858584;
+    --text-white: #FFFFFF;
+    --purple-color: #A259FF;
+}
+body{
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+.browse-intro{
+    background-color: var(--background-color);
+
+}
+.browse-intro input{
+    background-color: var(--background-color);
+    border: none;
+    border: 1px solid var(--text-gray);
+    border-radius: 10px;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+

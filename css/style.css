@@ -1,0 +1,163 @@
+:root{
+    --main-font: "Space Mono", monospace;
+    --font-2: "Work Sans", sans-serif;
+    --background-color: #2B2B2B;
+    --box-color: #3B3B3B;
+    --text-gray: #858584;
+    --text-white: #FFFFFF;
+    --purple-color: #A259FF;
+}
+body{
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+body button{
+    border: none;
+    background-color: transparent;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 67px;
+}
+h2{
+    font-size: 51px;
+}
+h3{
+    font-size: 38px;
+}
+h4{
+    font-size: 28px;
+}
+h5{
+    font-size: 22px;
+}
+.navbar{
+    padding: 10px 30px 10px 30px ;
+    font-family: var(--main-font);
+}
+.navbar .navbar-brand i{
+    font-size: 30px;;
+    color: var(--purple-color);
+}
+.navbar .navbar-brand{
+    color: var(--text-white);
+}
+.navbar-toggler{
+    color: var(--text-white);
+    border-color: white;
+    background-color: white;
+}
+.navbar ul{
+    padding: 2px;
+    align-content: center;
+}
+.navbar ul li a{
+    margin: 10px;
+    color: var(--text-white);
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.navbar ul li a:hover{
+    color :var(--purple-color)
+}
+.navbar ul li .special{
+    padding: 12px 40px 12px 40px;
+    width: 120px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--purple-color);
+    text-align: center;
+    transition: 0.3s;
+}
+.navbar ul li .special:hover{
+    color: var(--text-white);
+    background: linear-gradient(135deg, #A259FF, #FF6250);
+    width: 150px;
+}
+@media (max-width: 768px){
+    .navbar{
+        padding: 10px 0px 10px 0px ;
+    }
+    .navbar ul li .special{
+        width: 97%;
+    }
+    .navbar ul li .special:hover{
+        width: 97%;
+    }
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--box-color);
+    padding: 40px 195px 40px 195px ;
+
+}
+footer h5{
+    color: var(--text-white);
+    font-family: var(--main-font);
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+footer h5 i {
+    color: var(--purple-color);
+
+}
+footer p{
+    color: #cccccc;
+}
+footer .nft a i{
+    color: var(--purple-color);
+    font-size: 25px;
+    margin-left: 5px;
+}
+footer .explore ul li a{
+    color: #cccccc;
+}
+footer .join form{
+    position: relative;
+}
+footer .join input{
+    width: 100%;
+    position: relative;
+    padding: 16px 0px 16px 20px;
+    border-radius: 20px;
+    border: none;
+    color: black;
+}
+footer .join button{
+    position: absolute;
+    right: -2px;
+    top: 0px;
+    background-color: var(--purple-color);
+    height: 100%;
+    border-radius: 20px;
+    width: 50%;
+    transition: 0.5s;
+}
+footer .join button:hover{
+    background: linear-gradient(135deg, #A259FF, #FF6250);
+    width: 55%;
+}
+hr{
+    background-color: var(--text-gray);
+    height: 1px;
+    border: none;
+}
+@media (max-width: 900px){
+    footer{
+        padding: 20px 20px 20px 20px ;
+    }
+    footer .foot-cont{
+        display: flex;
+        flex-direction: column;
+    }
+}
