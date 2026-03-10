@@ -65,6 +65,10 @@ body {
   color: #fff;
   cursor: pointer;
   margin-top: 10px;
+  transition: 1s;
+}
+.sec2 button:hover{
+  background: linear-gradient(135deg, #A259FF, #FF6250);
 }
 
 .sec2 .login-message {
@@ -79,6 +83,7 @@ body {
 .sec2 .login-message a:hover{
   text-decoration: underline;
 }
+
 
 /* Error */
 .text-danger {

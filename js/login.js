@@ -15,6 +15,6 @@ loginBtn.addEventListener('click', function(event) {
         document.getElementById("account-t").style.display="block"
         window.location.href="index.html"
     }else{
-        console.log("Email or password wrong");
+        document.getElementById("account-error").style.display="block"
     }
 });
