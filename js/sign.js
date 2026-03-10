@@ -9,15 +9,15 @@ let usernameError = document.getElementById('username-error');
 let confirmPasswordError = document.getElementById('confirm-password-error');
 
 if (localStorage.getItem('userdata')) {
-        userdata = JSON.parse(localStorage.getItem('userdata'));
-}else{
-        userdata = [];
-        localStorage.setItem('userdata', JSON.stringify(userdata));
-    }
+    userdata = JSON.parse(localStorage.getItem('userdata'));
+} else {
+    userdata = [];
+    localStorage.setItem('userdata', JSON.stringify(userdata));
+}
 console.log(userdata);
 
-signInBtn.addEventListener('click', function() {
-    
+signInBtn.addEventListener('click', function () {
+
     let newUser = {
         username: userNameInp.value,
         email: emailInp.value,
@@ -26,7 +26,7 @@ signInBtn.addEventListener('click', function() {
     };
 
 
-    let num= 0;
+    let num = 0;
     console.log('Button clicked');
     console.log(userNameInp.value);
     console.log(emailInp.value);
@@ -40,17 +40,15 @@ signInBtn.addEventListener('click', function() {
 
     if (newUser.username === '' || newUser.email === '' || newUser.password === '') {
         document.getElementById('general-error').style.display = 'block';
-
-    }else if(userdata.find(u => u.email === newUser.email && u.password === newUser.password)){
-
-    document.getElementById("general-error").style.display="block";
-    document.getElementById("general-error").textContent="This account already exists";
-    return;
-    }else{
+    } else if (userdata.find(u => u.email === newUser.email && u.password === newUser.password)) {
+        document.getElementById("general-error").style.display = "block";
+        document.getElementById("general-error").textContent = "This account already exists";
+        return;
+    } else {
         document.getElementById('general-error').style.display = 'none';
         if (!userRegex.test(newUser.username)) {
-        usernameError.style.display = 'block';
-        } else{
+            usernameError.style.display = 'block';
+        } else {
             usernameError.style.display = 'none';
             num++;
         }
@@ -81,11 +79,6 @@ signInBtn.addEventListener('click', function() {
         } else {
             document.getElementById('success-message').style.display = 'none';
             document.getElementById('general-error').style.display = 'block';
-        }                       
-
+        }
     }
-    
-
-
-
 })
